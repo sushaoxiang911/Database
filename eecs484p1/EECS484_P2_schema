@@ -1,0 +1,132 @@
+USER
+Name					   Null?    Type
+ ---------------------------------------------------------------
+ USER_ID				   NOT NULL NUMBER
+ FIRST_NAME				   NOT NULL VARCHAR2(100)
+ LAST_NAME					    VARCHAR2(100)
+ YEAR_OF_BIRTH					    NUMBER(38)
+ MONTH_OF_BIRTH 				    NUMBER(38)
+ DAY_OF_BIRTH					    NUMBER(38)
+ GENDER 					    VARCHAR2(100)
+
+
+
+FRIENDs
+Name					   Null?    Type
+ -------------------------------------------------------------------
+ USER1_ID				   NOT NULL NUMBER
+ USER2_ID				   NOT NULL NUMBER
+					  
+
+
+CITIES
+ Name					   Null?    Type
+ -------------------------------------------------------------------
+ CITY_ID				   NOT NULL NUMBER(38)
+ CITY_NAME					    VARCHAR2(100)
+ STATE_NAME					    VARCHAR2(100)
+ COUNTRY_NAME					    VARCHAR2(100)
+
+
+PROGRAMS
+ Name					   Null?    Type
+ -------------------------------------------------------------------
+ PROGRAM_ID				   NOT NULL NUMBER(38)
+ INSTITUTION					    VARCHAR2(100)
+ CONCENTRATION					    VARCHAR2(100)
+ DEGREE 					    VARCHAR2(100)
+
+
+
+USER_CURRENT_CITY
+ Name					   Null?    Type
+ -------------------------------------------------------------------
+ USER_ID				   NOT NULL NUMBER
+ CURRENT_CITY_ID			   NOT NULL NUMBER(38)
+
+
+
+USER_HOMETOWN_CITY
+
+ Name					   Null?    Type
+ ----------------------------------------------------------
+ USER_ID				   NOT NULL NUMBER
+ HOMETOWN_CITY_ID			   NOT NULL NUMBER(38)
+
+
+
+EDUCATION
+ Name					   Null?    Type
+ ---------------------------------------------------------------------
+ USER_ID				   NOT NULL NUMBER
+ PROGRAM_ID				   NOT NULL NUMBER(38)
+ PROGRAM_YEAR				   NOT NULL NUMBER(38)
+
+
+
+USER_EVENT
+ Name					   Null?    Type
+ ------------------------------------------------------------------
+ EVENT_ID				   NOT NULL NUMBER
+ EVENT_CREATOR_ID				    NUMBER
+ EVENT_NAME					    VARCHAR2(100)
+ EVENT_TAGLINE					    VARCHAR2(1000)
+ EVENT_DESCRIPTION				    VARCHAR2(2000)
+ EVENT_HOST					    VARCHAR2(100)
+ EVENT_TYPE					    VARCHAR2(100)
+ EVENT_SUBTYPE					    VARCHAR2(100)
+ EVENT_LOCATION 				    VARCHAR2(200)
+ EVENT_CITY_ID				   NOT NULL NUMBER(38)
+ EVENT_START_TIME			   NOT NULL TIMESTAMP(6)
+ EVENT_END_TIME 			   NOT NULL TIMESTAMP(6)
+
+
+
+PHOTOS
+Name					   Null?    Type
+ -------------------------------------------------------
+ PHOTO_ID				   NOT NULL VARCHAR2(100)
+ ALBUM_ID					    VARCHAR2(100)
+ PHOTO_CAPTION					    VARCHAR2(2000)
+ PHOTO_CREATED_TIME				    TIMESTAMP(6)
+ PHOTO_MODIFIED_TIME				    TIMESTAMP(6)
+ PHOTO_LINK					    VARCHAR2(2000)
+
+
+ALBUMS
+ Name					   Null?    Type
+ ---------------------------------------------------------------------
+ ALBUM_ID				   NOT NULL VARCHAR2(100)
+ ALBUM_OWNER_ID 				    NUMBER
+ ALBUM_NAME					    VARCHAR2(100)
+ ALBUM_CREATED_TIME				    TIMESTAMP(6)
+ ALBUM_MODIFIED_TIME				    TIMESTAMP(6)
+ ALBUM_LINK					    VARCHAR2(2000)
+ ALBUM_VISIBILITY				    VARCHAR2(100)
+ COVER_PHOTO_ID 				    VARCHAR2(100)
+
+
+TAGS
+ Name					   Null?    Type
+ ---------------------------------------------------------------------
+ TAG_PHOTO_ID				   NOT NULL VARCHAR2(100)
+ TAG_SUBJECT_ID 			   NOT NULL NUMBER
+ TAG_CREATED_TIME				    TIMESTAMP(6)
+ TAG_X						    NUMBER
+ TAG_Y						    NUMBER
+
+
+PARTICIPANTS
+Name					   Null?    Type
+ ------------------------------------------------------------------------
+ EVENT_ID				   NOT NULL NUMBER
+ USER_ID				   NOT NULL NUMBER
+ CONFIRMATION					    VARCHAR2(100)
+
+
+
+
+
+
+
+

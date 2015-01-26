@@ -1,0 +1,29 @@
+location(loc_id: integer, city: varchar2(100), state: varchar2(100), country: varchar2(100))
+
+event(event_id: varchar2(100), event_creator_id: varchar2(100), event_name: varchar2(100), event_tagline: varchar2(1000), event_description: varchar2(4000), event_host: varchar2(100), event_type: varchar2(100), event_subtype: varchar2(100))
+
+evt_occur_loc(event_location: varchar2(100), event_start_time: timestamp(6), event_end_time: timestamp(6), event_id: varchar2(100), loc_id: integer)
+
+users(user_id: varchar2(100), first_name: varchar2(100), last_name: varchar2(100), year_of_birth: number(38), month_of_birth: number(38), day_of_birth: number(38), gender: varchar2(100))
+
+usr_join_evt(event_id: varchar2(100), user_id: varchar2(100), status: varchar2(100))
+
+loc_ishometown_usr(user_id: varchar2(100), loc_id: integer)
+
+loc_iscurrent_usr(user_id: varchar2(100), loc_id: integer)
+
+usr_isfriend_usr(user1_id: varchar2(100), user2_id: varchar2(100))
+
+photo(photo_id: varchar2(100), photo_caption: varchar2(2000), photo_created_time: timestamp(6), photo_modified_time: timestamp(6), photo_link: varchar2(2000))
+
+album(album_id: varchar2(100), album_name: varchar2(100), cover_photo_id: varchar2(100), album_created_time: timestamp(6), album_modified_time: timestamp(6), album_link: varchar2(2000), album_visibility: varchar2(100))
+
+alb_has_pho(album_id: varchar2(100), photo_id: varchar2(100)) 
+
+pho_tag_usr(tag_x_coordinate: number, tag_y_coordinate: number, tag_created_time: timestamp(6), photo_id: varchar2(100), user_id: varchar2(100))
+
+program(program_id: integer, institution_name: varchar2(100), concentration: char(100), degree: varchar2(100))
+
+usr_own_alb(album_id: varchar2(100), user_id: varchar2(100))
+
+usr_join_pgm(year_of_graduation: varchar2(100), user_id: varchar2(100), program_id: integer)
